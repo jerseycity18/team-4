@@ -1,17 +1,17 @@
 import React from 'react';
 import buddy from './mock/buddy';
-import { Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 const BuddyProfile = () => {
 	console.log(buddy);
 	return(
-		<div>
-			<Row>
-				<Col md={ 3 }>
-						<div class='profile-pic'></div>
+		<Grid>
+			<Row className="show-grid">
+				<Col md={ 4 }>
+						<div>sadasdasdsa</div>
 				</Col>
-				<Col md={ 9 }>
-					<h1>Buddy: { buddy.name }</h1>
+				<Col md={ 8 }>
+					<h4>Buddy: { buddy.name }</h4>
 					<p>Address: { buddy.address }</p>
 				</Col>
 			</Row>
@@ -25,7 +25,7 @@ const BuddyProfile = () => {
 					}
 				</div>
 			</Row>
-		</div>
+		</Grid>
 	)
 }
 
