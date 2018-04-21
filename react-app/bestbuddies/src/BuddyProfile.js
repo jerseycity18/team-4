@@ -5,15 +5,6 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 
 const BuddyProfile = () => {
-	const getVolunteers = () => {
-		for(let i = 1; i < 5; i++) {
-			return(
-				<Col md={ 1 }>
-					<img class='volunteer-profile' src={`/images/volunteer${i}.png`} />
-				</Col>
-			);
-		}	
-	}
 	return(
 		<Grid>
 			<Row>
@@ -31,7 +22,21 @@ const BuddyProfile = () => {
 				<Col md={ 12 }>
 					<h1>Volunteers</h1>
 					<Row>
-						{	getVolunteers() }
+					<Col md={ 2 }>
+						<img class='volunteer-profile' src={`/images/volunteer1.png`} />
+					</Col>
+					<Col md={ 2 }>
+						<img class='volunteer-profile' src={`/images/volunteer2.png`} />
+					</Col>
+					<Col md={ 2 }>
+						<img class='volunteer-profile' src={`/images/volunteer3.png`} />
+					</Col>
+					<Col md={ 2 }>
+						<img class='volunteer-profile' src={`/images/volunteer4.png`} />
+					</Col>
+					<Col md={ 2 }>
+						<img class='volunteer-profile' src={`/images/volunteer5.png`} />
+					</Col>
 					</Row>
 				</Col>
 			</Row>
