@@ -14,6 +14,20 @@ class App extends Component {
 		};
 		this.handleGoToBuddyPage = this.handleGoToBuddyPage.bind(this);
 	}
+
+	UNSAFE_componentWillMount() {
+	    const url = 'http://localhost:8080/members'
+	    fetch(url) // Call the fetch function passing the url of the API as a parameter
+        .then(function(data) {
+            // Your code for handling the data you get from the API
+            console.log("DATA FROM SERVER")
+            console.log(data)
+        })
+        .catch(function() {
+            // This is where you run code if the server returns any errors
+        });
+	}
+
 	handleGoToBuddyPage() {
 		this.setState({
 			page: 'buddyProfile'
