@@ -1,18 +1,21 @@
 import React from 'react';
 import buddy from './mock/buddy';
-
-
+import { Row, Col } from 'react-bootstrap';
 
 const BuddyProfile = () => {
 	console.log(buddy);
 	return(
 		<div>
-			<div class='header'>
-				<img src='/' alt='profile picture' />
-				<h1>Buddy: { buddy.name }</h1>
-				<p>Address: { buddy.address }</p>
-			</div>
-			<div>
+			<Row>
+				<Col md={ 3 }>
+						<div class='profile-pic'></div>
+				</Col>
+				<Col md={ 9 }>
+					<h1>Buddy: { buddy.name }</h1>
+					<p>Address: { buddy.address }</p>
+				</Col>
+			</Row>
+			<Row>
 				<p>Matches:</p>
 				<div>
 					{ 
@@ -21,7 +24,7 @@ const BuddyProfile = () => {
 						}) 
 					}
 				</div>
-			</div>
+			</Row>
 		</div>
 	)
 }
