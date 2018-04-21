@@ -1,0 +1,16 @@
+delimiter $$
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `veiw_ratings` AS select `ratings`.`id` AS `id`,`ratings`.`buddy_id` AS `buddy_id`,`ratings`.`volunteer_id` AS `volunteer_id`,`ratings`.`ratings` AS `ratings`,`ratings`.`description` AS `description`,`ratings`.`description1` AS `description1`,`ratings`.`priority` AS `priority` from `ratings`$$
+
+delimiter $$
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `view_buddy` AS select `buddy`.`buddy_id` AS `buddy_id`,`buddy`.`member_id` AS `member_id` from `buddy`$$
+
+delimiter $$
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `view_buddy_volunteer` AS select `buddy_volunteer`.`id` AS `id`,`buddy_volunteer`.`buddy_id` AS `buddy_id`,`buddy_volunteer`.`volunteer_id` AS `volunteer_id` from `buddy_volunteer`$$
+
+delimiter $$
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `view_volunteer` AS select `volunteer`.`volunteer_id` AS `volunteer_id`,`volunteer`.`member_id` AS `member_id` from `volunteer`$$
+
