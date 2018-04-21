@@ -3,27 +3,31 @@ import buddy from './mock/buddy';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 const BuddyProfile = () => {
-	console.log(buddy);
+
 	return(
 		<Grid>
-			<Row className="show-grid">
-				<Col md={ 4 }>
-						<div>sadasdasdsa</div>
+			<Row>
+				<Col md={ 2 }>
+						<div class='profile-pic'></div>
 				</Col>
-				<Col md={ 8 }>
+				<Col md={ 10 } className='buddy-info'>
 					<h4>Buddy: { buddy.name }</h4>
 					<p>Address: { buddy.address }</p>
+					<p>Joined on: { buddy.dateJoined }</p>
+					<p>Last Match On: { buddy.dateSinceLastMatch }</p>
 				</Col>
 			</Row>
-			<Row>
-				<p>Matches:</p>
-				<div>
-					{ 
-						buddy.volunteers.map((volunteer) => {
-						<p>{volunteer.name} {volunteer.matching}</p>
-						}) 
-					}
-				</div>
+			<Row className='volunteers'>
+				<Col md={ 12 }>
+					<h1>Volunteers</h1>
+					<Row>
+						{ 
+							buddy.volunteers.map((volunteer) =>
+								<Col md={2}><p>{ volunteer.name } {volunteer.matching}</p></Col>
+							) 
+						}
+					</Row>
+				</Col>
 			</Row>
 		</Grid>
 	)
