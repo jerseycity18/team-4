@@ -22,12 +22,6 @@
   font-size: large;
 }
 
-.profile-pic {
-	width: 100px;
-	height: 100px;
-	border: 1px solid;
-}
-
 .buddy-info {
 	text-align: left;
 }
@@ -38,6 +32,10 @@
 
 .volunteer-profile {
 	width: 200px;
+}
+
+.profile-pic {
+	width: 170px;
 }
 
 @keyframes App-logo-spin {
