@@ -9,7 +9,7 @@ const BuddyProfile = () => {
 		<Grid>
 			<Row>
 				<Col md={ 2 }>
-						<div class='profile-pic'></div>
+						<img src='/images/profile.png' alt='profile-pic' class='profile-pic' />
 				</Col>
 				<Col md={ 10 } className='buddy-info'>
 					<h4>Buddy: { buddy.name }</h4>
