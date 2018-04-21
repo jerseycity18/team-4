@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
+import BuddyList from './buddyList';
 import BuddyProfile from './BuddyProfile';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			page: 'buddyList'
+			page: 'buddyProfile'
+			// page: 'buddyList'
 		};
+		this.handleGoToBuddyPage = this.handleGoToBuddyPage.bind(this);
 	}
 	handleGoToBuddyPage() {
 		this.setState({
@@ -20,18 +22,17 @@ class App extends Component {
 	getPage() {
 		const page = this.state.page;
 		if(page === 'buddyList') {
-			return <BuddyList goToBuddyPage={ handleGoToBuddyPage }/>
+			return <BuddyList goToBuddyPage={ this.handleGoToBuddyPage }/>
 		}
 		return <BuddyProfile />
 	}
-	const page = 'buddylist';
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Welcome to BestBuddies</h1>
         </header>
-			{ getPage() }
+			{ this.getPage() }
       </div>
     );
   }
