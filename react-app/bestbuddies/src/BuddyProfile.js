@@ -6,7 +6,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 const BuddyProfile = () => {
 	const getVolunteers = () => {
-		for(let i = 0; i < 5; i++) {
+		for(let i = 1; i < 5; i++) {
 			return(
 				<Col md={ 1 }>
 					<img class='volunteer-profile' src={`/images/volunteer${i}.png`} />
