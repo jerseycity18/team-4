@@ -50,4 +50,12 @@ public class Member {
     public void setMemberEmail(String memberEmail) {
         this.memberEmail = memberEmail;
     }
+
+    public Date getMemberJoinDate() {
+        return memberJoinDate;
+    }
+
+    public void setMemberJoinDate(Date memberJoinDate) {
+        this.memberJoinDate = memberJoinDate;
+    }
 }
