@@ -12,6 +12,9 @@ public interface MemeberRepository extends JpaRepository<Member, Integer>{
     @Query(value = "SELECT * FROM member limit 1", nativeQuery = true)
     Member getAll();
 
-    @Query(value = "SELECT * FROM member where member_roles =?1", nativeQuery = true)
-    List<Member> memberByRole( int id);
+    @Query(value = "SELECT * FROM member where member_roles =:memberRoles", nativeQuery = true)
+    List<Member> memberByRole( @Param("memberRoles")  int memberRoles);
+
+
+
 }
