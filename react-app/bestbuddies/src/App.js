@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import BuddyList from './buddyList';
+import BuddyList from './BuddyList';
 import BuddyProfile from './BuddyProfile';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			page: 'buddyProfile'
-			// page: 'buddyList'
+			// page: 'buddyProfile'
+		     page: 'buddyList'
 		};
 		this.handleGoToBuddyPage = this.handleGoToBuddyPage.bind(this);
 	}
