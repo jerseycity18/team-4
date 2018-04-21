@@ -17,7 +17,7 @@ class App extends Component {
 
 	UNSAFE_componentWillMount() {
 	    const url = 'http://localhost:8080/members'
-	    fetch(url) // Call the fetch function passing the url of the API as a parameter
+	    fetch(url, {mode: 'no-cors'}) // Call the fetch function passing the url of the API as a parameter
         .then(function(data) {
             // Your code for handling the data you get from the API
             console.log("DATA FROM SERVER")

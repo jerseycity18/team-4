@@ -1,6 +1,6 @@
 const buddy = {
-	name: 'Edward Jhones',
-	dateJoined: '12/12/2012',
+	name: 'Billy Merc',
+	dateJoined: '01/01/2017',
 	dateSinceLastMatch: '15 days',
 	address: 'Manhattan, NY',
 	volunteers: [

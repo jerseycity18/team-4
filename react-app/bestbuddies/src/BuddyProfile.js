@@ -23,9 +23,6 @@ const BuddyProfile = () => {
 					<h1>Volunteers</h1>
 					<Row>
 					<Col md={ 2 }>
-						<img class='volunteer-profile' src={`/images/volunteer1.png`} />
-					</Col>
-					<Col md={ 2 }>
 						<img class='volunteer-profile' src={`/images/volunteer2.png`} />
 					</Col>
 					<Col md={ 2 }>
