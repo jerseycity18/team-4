@@ -21,11 +21,9 @@ const BuddyProfile = () => {
 				<Col md={ 12 }>
 					<h1>Volunteers</h1>
 					<Row>
-						{ 
-							buddy.volunteers.map((volunteer) =>
-								<Col md={2}><p>{ volunteer.name } {volunteer.matching}</p></Col>
-							) 
-						}
+						<Col md={ 1 }>
+							<img src='/images/volunteer1.png' />
+						</Col>
 					</Row>
 				</Col>
 			</Row>
